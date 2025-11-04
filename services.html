@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan - Blog Fotografi Anda</title>
+    <title>Layanan - Blog Fotografi Daffa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
         <div class="container max-w-6xl mx-auto p-4 flex justify-between items-center">
             
             <a href="index.html" class="font-serif text-2xl font-bold text-dark-primary">
-                Nama Fotografer
+                Nadhwa Daffa AM
             </a>
 
             <nav>
@@ -147,10 +147,28 @@
 
     <footer class="bg-dark-primary text-gray-400 py-10 mt-16">
         <div class="container max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2025 - Nama Fotografer. Semua Hak Dilindungi.</p>
+            <p>&copy; 2025 - Nadhwa Daffa. Semua Hak Dilindungi.</p>
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dapatkan elemen tombol toggle (hamburger)
+            const menuToggle = document.getElementById('menu-toggle');
+            // Dapatkan elemen menu navigasi
+            const navMenu = document.getElementById('nav-menu');
+
+            // Cek apakah kedua elemen ada
+            if (menuToggle && navMenu) { 
+                // Tambahkan event listener untuk merespon klik
+                menuToggle.addEventListener('click', function() {
+                    // Toggle class 'hidden'. Ini adalah inti dari perbaikan:
+                    // Jika hidden ada (menu tertutup), hapuslah (menu terbuka).
+                    // Jika hidden tidak ada (menu terbuka), tambahkanlah (menu tertutup).
+                    navMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    </body>
 </html>
